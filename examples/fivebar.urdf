@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!-- Symmetric planar five-bar (pantograph).
+     Spanning-tree form: two 2R legs off a common base, each ending in a fixed
+     tip at the apex; the loop closure is supplied by the five-bar model.
+     Planar motion about z, so only izz is meaningful. Lengths in m, mass in
+     kg. Uniform slender rods: com at L/2, izz = m L^2 / 12. The payload at the
+     apex (0.10 kg total) is split equally over the two tip links. -->
+<robot name="fivebar_pantograph">
+  <link name="base"/>
+
+  <!-- leg 1 (motor at x = -d/2) -->
+  <joint name="motor1" type="continuous">
+    <parent link="base"/><child link="proximal1"/>
+    <origin xyz="-0.10 0 0"/><axis xyz="0 0 1"/>
+  </joint>
+  <link name="proximal1">
+    <inertial><origin xyz="0.10 0 0"/><mass value="0.50"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0.00166667"/></inertial>
+  </link>
+  <joint name="elbow1" type="continuous">
+    <parent link="proximal1"/><child link="distal1"/>
+    <origin xyz="0.20 0 0"/><axis xyz="0 0 1"/>
+  </joint>
+  <link name="distal1">
+    <inertial><origin xyz="0.125 0 0"/><mass value="0.30"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0.0015625"/></inertial>
+  </link>
+  <joint name="tip1" type="fixed">
+    <parent link="distal1"/><child link="apex1"/>
+    <origin xyz="0.25 0 0"/>
+  </joint>
+  <link name="apex1">
+    <inertial><origin xyz="0 0 0"/><mass value="0.05"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/></inertial>
+  </link>
+
+  <!-- leg 2 (motor at x = +d/2) -->
+  <joint name="motor2" type="continuous">
+    <parent link="base"/><child link="proximal2"/>
+    <origin xyz="0.10 0 0"/><axis xyz="0 0 1"/>
+  </joint>
+  <link name="proximal2">
+    <inertial><origin xyz="0.10 0 0"/><mass value="0.50"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0.00166667"/></inertial>
+  </link>
+  <joint name="elbow2" type="continuous">
+    <parent link="proximal2"/><child link="distal2"/>
+    <origin xyz="0.20 0 0"/><axis xyz="0 0 1"/>
+  </joint>
+  <link name="distal2">
+    <inertial><origin xyz="0.125 0 0"/><mass value="0.30"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0.0015625"/></inertial>
+  </link>
+  <joint name="tip2" type="fixed">
+    <parent link="distal2"/><child link="apex2"/>
+    <origin xyz="0.25 0 0"/>
+  </joint>
+  <link name="apex2">
+    <inertial><origin xyz="0 0 0"/><mass value="0.05"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/></inertial>
+  </link>
+</robot>

@@ -1,0 +1,5 @@
+# Core dependency
+numpy>=1.22
+
+# Optional: only needed for plotting.py and the example scripts
+matplotlib>=3.5
