@@ -24,10 +24,10 @@ Two situations:
 from dataclasses import dataclass
 import numpy as np
 
-from fkine import fk, constraint
-from ikine import working_modes
-from jacobians import det_A
-from robotgeometry import elbows
+from .fkine import fk, constraint
+from .ikine import working_modes
+from .jacobians import det_A
+from .robotgeometry import elbows
 
 
 @dataclass

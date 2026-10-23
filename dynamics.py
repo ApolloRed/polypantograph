@@ -33,9 +33,9 @@ mounted on (tool_leg), via the 3x2 end-effector Jacobian Je = [J; h^T].
 from dataclasses import dataclass
 import numpy as np
 
-from robotgeometry import elbows
-from fkine import fk
-from jacobians import jacobian
+from .robotgeometry import elbows
+from .fkine import fk
+from .jacobians import jacobian
 
 
 def _pair(x):

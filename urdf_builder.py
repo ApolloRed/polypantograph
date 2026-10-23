@@ -32,8 +32,8 @@ geometry and parameters.  Planar motion is about z, so only izz is emitted.
 
 import numpy as np
 
-from robotgeometry import FiveBarGeometry
-from dynamics import DynamicParameters
+from .robotgeometry import FiveBarGeometry
+from .dynamics import DynamicParameters
 
 
 def _g(x):

@@ -35,8 +35,8 @@ import os
 import xml.etree.ElementTree as ET
 import numpy as np
 
-from robotgeometry import FiveBarGeometry
-from dynamics import DynamicParameters, FiveBarDynamics
+from .robotgeometry import FiveBarGeometry
+from .dynamics import DynamicParameters, FiveBarDynamics
 
 
 def _xyz(elem, default=(0.0, 0.0, 0.0)):

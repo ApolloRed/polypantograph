@@ -25,9 +25,9 @@ This file provides:
 from dataclasses import dataclass
 import numpy as np
 
-from robotgeometry import wrap, elbows
-from fkine import fk, constraint
-from jacobians import AB
+from .robotgeometry import wrap, elbows
+from .fkine import fk, constraint
+from .jacobians import AB
 
 
 # --------------------------------------------------------------------------

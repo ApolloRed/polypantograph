@@ -14,10 +14,10 @@ matplotlib's built-in Computer-Modern math font otherwise.
 import shutil
 import numpy as np
 
-from robotgeometry import elbows
-from ikine import ik
-from fkine import fk
-from jacobians import jacobian, singular_values
+from .robotgeometry import elbows
+from .ikine import ik
+from .fkine import fk
+from .jacobians import jacobian, singular_values
 
 # colors used to tell the three solvers apart in comparison plots
 _COLORS = {"(a) closed form": "tab:green",

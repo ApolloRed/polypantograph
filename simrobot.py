@@ -12,8 +12,8 @@ estimator accuracy in tests.
 """
 
 import numpy as np
-from robotio import RobotIO
-from fkine import fk
+from .robotio import RobotIO
+from .fkine import fk
 
 
 class SimulatedRobot(RobotIO):

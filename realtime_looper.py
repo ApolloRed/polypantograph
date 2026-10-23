@@ -23,9 +23,9 @@ from dataclasses import dataclass
 import time
 import numpy as np
 
-from robotio import RobotIO
-from jacobians import det_A, inv_condition, velocity_ik
-from fkine import FKNewtonEstimator
+from .robotio import RobotIO
+from .jacobians import det_A, inv_condition, velocity_ik
+from .fkine import FKNewtonEstimator
 
 
 @dataclass

@@ -24,8 +24,8 @@ This file provides:
 from dataclasses import dataclass
 import numpy as np
 
-from robotgeometry import elbows
-from jacobians import AB, velocity_fk, singular_values
+from .robotgeometry import elbows
+from .jacobians import AB, velocity_fk, singular_values
 
 
 def distal_angles(geom, q, X):

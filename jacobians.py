@@ -22,7 +22,7 @@ assembly mode sigma.
 """
 
 import numpy as np
-from robotgeometry import elbows
+from .robotgeometry import elbows
 
 
 def AB(geom, q, X):
